@@ -1,0 +1,133 @@
+/* style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #444;
+    padding: 20px 0;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #ddd;
+    margin: 0;
+    background: #fff;
+}
+
+form {
+    max-width: 800px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Center form and add space around */
+    position: relative; /* Relative positioning to control form content */
+}
+
+button[type="submit"] {
+    background: #28a745;
+    border: none;
+    padding: 10px 15px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px; /* Space between the button and other elements */
+}
+
+button[type="submit"]:hover {
+    background: #218838;
+}
+
+#todo-list {
+    max-width: 800px;
+    margin: 20px auto; /* Center list and add space around */
+    padding: 10px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 200px; /* Height of the to-do list */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+}
+
+.todo-item {
+    display: inline-block; /* Align items horizontally */
+    vertical-align: top; /* Align items at the top */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fafafa;
+    position: relative;
+    width: 200px; /* Fixed width for each item */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+.todo-item.complete {
+    background: #e6ffe6;
+    border-color: #b2ffb2;
+}
+
+.todo-item.complete::before {
+    content: '✔';
+    color: #28a745;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.todo-item h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.todo-item p {
+    margin: 5px 0;
+    color: #666;
+}
+
+button {
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px 0;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+input[type="text"],
+textarea {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #007bff;
+    outline: none;
+}
